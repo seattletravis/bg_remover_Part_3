@@ -30,11 +30,10 @@ def run_batch_removal_tool():
 
     #Loop over all Images
     for pic in pic_list:
-        save_number += 1
         input_path = fr'{named_directory_in.get()}\{pic}'
         
         # Store path of the output image in the variable output_path
-        output_path = fr'{named_directory_out.get()}\no_bg{save_number}.png'
+        output_path = fr'{named_directory_out.get()}\{pic}'
 
         # Check if image exists
         if os.path.exists(output_path):
